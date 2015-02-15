@@ -6,7 +6,9 @@
                 <div class="oe_structure">
                     <div class="container">
                         <t t-foreach="teachers" t-as="teacher">
-                            <p><t t-esc="teacher.id"/> <t t-esc="teacher.name"/></p>
+                            <p><a t-attf-href="/academy/{{ slug(teacher) }}">
+                                <t t-esc="teacher.name"/></a>
+                            </p>
                         </t>
                     </div>
                 </div>
@@ -18,7 +20,7 @@
                 <div class="oe_structure"/>
                 <div class="oe_structure">
                     <div class="container">
-                        <p><t t-esc="person.id"/> <t t-esc="person.name"/></p>
+                        <h3><t t-esc="person.name"/></h3>
                     </div>
                 </div>
                 <div class="oe_structure"/>
